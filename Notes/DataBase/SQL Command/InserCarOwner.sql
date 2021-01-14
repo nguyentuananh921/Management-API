@@ -1,0 +1,14 @@
+USE ManagementSystem
+GO
+
+INSERT INTO CarOwners (CarID,CarPlate) VALUES ()
+GO
+
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+SET IDENTITY_INSERT CarOwners ON
+GO
+
+
+INSERT INTO CarOwners (CarID,CarPlate) VALUES (1,N'30E-580.66');

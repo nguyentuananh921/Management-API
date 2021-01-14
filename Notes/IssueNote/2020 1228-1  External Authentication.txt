@@ -1,0 +1,4 @@
+[x] Facebook Authentication
+[x] Google Authentication
+[x] Remember to change the port to 44370 in Properties\launchSettings.json
+Can't implement Microsoft Account

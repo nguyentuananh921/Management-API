@@ -1,0 +1,10 @@
+https://stackoverflow.com/questions/5538974/the-relationship-could-not-be-changed-because-one-or-more-of-the-foreign-key-pro
+
+
+https://www.codegrepper.com/code-examples/csharp/entity+framework+update+child+records
+
+https://stackoverflow.com/questions/27176014/how-to-add-update-child-entities-when-updating-a-parent-entity-in-ef
+
+https://www.nuomiphp.com/eplan/en/54503.html
+
+https://stackoverflow.com/questions/48359363/ef-core-adding-updating-entity-and-adding-updating-removing-child-entities-in

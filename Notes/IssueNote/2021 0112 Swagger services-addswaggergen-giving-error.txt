@@ -1,0 +1,13 @@
+https://stackoverflow.com/questions/43707733/services-addswaggergen-giving-error
+
+
+Late answer, but as a new update on this question, I just noticed in order to make AddSwaggerGen works fine in .NET Core 3, you need to use OpenApiInfo instead of Info. So your new AddSwaggerGen should be something like this:
+
+services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "The API", Version = "v1" });
+});
+Also you need to add the following to your using directives:
+
+using Microsoft.OpenApi.Models;
+Read more here https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio

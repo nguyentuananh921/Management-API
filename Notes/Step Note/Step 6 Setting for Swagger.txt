@@ -1,0 +1,3 @@
+Adding: NuGet Package
+[] - Swashbuckle.AspNetCore.Swagger
+[] - Swashbuckle.AspNetCore.SwaggerGen

@@ -1,0 +1,15 @@
+ public class ApplicationDbContext : IdentityDbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
+        //Other Entity
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder); //Note This Entity
+            modelBuilder.Entity<CarDriver>()
+                .HasKey(c => new { c.PeopleID, c.CarID });
+        }  
+    }

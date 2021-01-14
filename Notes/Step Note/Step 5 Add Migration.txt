@@ -1,0 +1,3 @@
+Open Tools => NuGet Package Manager => Package Manager Console
+Add-Migration Initial
+Update-Database

@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=wQZRC7vXT08
+
+https://blog.rsuter.com/asp-net-mvc-how-to-implement-an-edit-form-for-an-entity-with-a-sortable-child-collection/
+https://github.com/RicoSuter/SampleSortableChildCollectionForm.git
+
+https://www.c-sharpcorner.com/article/crud-in-single-view/
+
+https://stackoverflow.com/questions/27176014/how-to-add-update-child-entities-when-updating-a-parent-entity-in-ef/39452865
+
+https://stackoverflow.com/questions/45302078/asp-net-mvc-5-save-parent-and-child-records-together
+
+https://www.c-sharpcorner.com/forums/updating-masterdetail-parentchild-data-in-mvc

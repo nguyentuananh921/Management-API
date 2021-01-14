@@ -1,0 +1,12 @@
+USE [ManagementSystem]
+GO
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+SET IDENTITY_INSERT Cars ON
+GO
+
+
+INSERT INTO Cars (CarID) VALUES (2);
+
+
+

@@ -1,0 +1,11 @@
+Scarffold will add
+- Data folder ->DbContext.cs.
+- Add Service in Startup.cs
+	services.AddDbContext<ApplicationDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
+- Add connectionstring in appsettings.json
+
+
+
+
+
