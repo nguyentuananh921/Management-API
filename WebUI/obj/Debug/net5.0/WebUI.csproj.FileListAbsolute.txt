@@ -82,3 +82,5 @@ D:\Coding Learning\ManagementSystem\WebUI\obj\Debug\net5.0\WebUI.dll
 D:\Coding Learning\ManagementSystem\WebUI\obj\Debug\net5.0\ref\WebUI.dll
 D:\Coding Learning\ManagementSystem\WebUI\obj\Debug\net5.0\WebUI.pdb
 D:\Coding Learning\ManagementSystem\WebUI\obj\Debug\net5.0\WebUI.genruntimeconfig.cache
+D:\Coding Learning\ManagementSystem\WebUI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Facebook.dll
+D:\Coding Learning\ManagementSystem\WebUI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
