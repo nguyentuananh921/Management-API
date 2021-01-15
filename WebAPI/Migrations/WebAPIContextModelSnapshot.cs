@@ -242,7 +242,7 @@ namespace WebAPI.Migrations
 
                     b.HasIndex("PeopleID");
 
-                    b.ToTable("Contact");
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("WebAPI.Models.DriverLicence", b =>

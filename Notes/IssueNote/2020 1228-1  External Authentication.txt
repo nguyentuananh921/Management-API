@@ -1,4 +1,7 @@
+
 [x] Facebook Authentication
+https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/facebook-logins?view=aspnetcore-5.0
 [x] Google Authentication
+https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/google-logins?view=aspnetcore-5.0
 [x] Remember to change the port to 44370 in Properties\launchSettings.json
 Can't implement Microsoft Account

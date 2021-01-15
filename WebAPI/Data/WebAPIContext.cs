@@ -22,7 +22,7 @@ namespace WebAPI.Data
             modelBuilder.Entity<CarDriver>()
                 .HasKey(c => new { c.PeopleID, c.CarID });
         }
-        public DbSet<WebAPI.Models.Contact> Contact { get; set; }
+        public DbSet<WebAPI.Models.Contact> Contacts { get; set; }
         public DbSet<WebAPI.Models.People> Peoples { get; set; }
         public DbSet<WebAPI.Models.DriverLicence> DriverLicences { get; set; }
         public DbSet<WebAPI.Models.CarModel> CarModels { get; set; }
