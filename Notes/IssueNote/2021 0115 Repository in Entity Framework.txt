@@ -1,3 +1,5 @@
 https://phantienquang.blogspot.com/2015/06/aspnet-mvc-ap-dung-mau-repository-trong.html
 
 https://stackoverrun.com/vi/q/2272476
+
+https://hoccungchuyengia.com/tim-hieu-ve-repository-pattern-va-generic-repository-pattern/

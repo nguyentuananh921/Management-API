@@ -88,16 +88,17 @@ namespace WebAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCar(int id)
         {
-            var car = await _context.Cars.FindAsync(id);
-            if (car == null)
+            var existingcar = await _context.Cars.FindAsync(id);
+            if (existingcar == null)
             {
                 return NotFound();
             }
 
-            _context.Cars.Remove(car);
+            _context.Cars.Remove(existingcar);
             await _context.SaveChangesAsync();
 
             return NoContent();
+
         }
 
         private bool CarExists(int id)

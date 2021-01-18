@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WebUI.Models;
 
 namespace WebUI.Data
 {
@@ -11,6 +12,6 @@ namespace WebUI.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-        }
+        }       
     }
 }

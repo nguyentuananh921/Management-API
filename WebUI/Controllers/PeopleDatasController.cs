@@ -1,0 +1,190 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using WebUI.Data;
+using WebUI.Models;
+using Newtonsoft.Json;
+
+namespace WebUI.Controllers
+{
+    public class PeopleDatasController : Controller
+    {
+        private readonly ApplicationDbContext _context;
+
+        private readonly ClientAPI _api = new ClientAPI();
+
+        public PeopleDatasController(ApplicationDbContext context)        
+        {            
+            _context = context;
+            _api.Initial();
+        }
+
+        // GET: PeopleDatas
+        public async Task<IActionResult> Index()
+        {
+            List<PeopleData> peopleDatas = new List<PeopleData>();
+            //var apiResponse =_api
+            //https://www.youtube.com/watch?v=bgsROO8kDh0&t=917s
+
+            using (var httpClient = _api.Initial())
+            {
+                using (var response = await httpClient.GetAsync("api/Peoples"))
+                {
+                    string apiResonse = await response.Content.ReadAsStringAsync();
+                    peopleDatas = JsonConvert.DeserializeObject<List<PeopleData>>(apiResonse);
+                }
+            }
+            //return View(await _context.PeopleData.ToListAsync());
+            return View(peopleDatas);
+        }
+
+        // GET: PeopleDatas/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            var peopleDetail = new PeopleData();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            using (var httpClient = _api.Initial())
+            {
+                using (var response = await httpClient.GetAsync("api/Peoples/" + id))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        string apiResonse = await response.Content.ReadAsStringAsync();
+                        peopleDetail = JsonConvert.DeserializeObject<PeopleData>(apiResonse);
+                    }
+                    else
+                    {
+                        ViewBag.StatusCode = response.StatusCode;
+                    }
+                }
+            }
+            return View(peopleDetail);
+        }
+
+        // GET: PeopleDatas/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: PeopleDatas/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("PeopleID,PeopleName,PeopleFrom,PeopleGende,PeopleDateOfBirth,PeopleAddress,PeoplePIDNumber,PeoplePIDDate,PeoplePIDPlace,PeoplePIDValidUntil,JoinDate,PeopleImagePath")] PeopleData peopleData)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(peopleData);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(peopleData);
+        }
+
+        // GET: PeopleDatas/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            var peopleData = new PeopleData();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            using (var httpClient = _api.Initial())
+            {
+                using (var response = await httpClient.GetAsync("api/Peoples/" + id))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        string apiResonse = await response.Content.ReadAsStringAsync();
+                        peopleData = JsonConvert.DeserializeObject<PeopleData>(apiResonse);
+                    }
+                    else
+                    {
+                        ViewBag.StatusCode = response.StatusCode;
+                    }
+                }
+            }
+            return View(peopleData);
+        }
+
+        // POST: PeopleDatas/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(int id, [Bind("PeopleID,PeopleName,PeopleFrom,PeopleGende,PeopleDateOfBirth,PeopleAddress,PeoplePIDNumber,PeoplePIDDate,PeoplePIDPlace,PeoplePIDValidUntil,JoinDate,PeopleImagePath")] PeopleData peopleData)
+        //{
+        //    if (id != peopleData.PeopleID)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            _context.Update(peopleData);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!PeopleDataExists(peopleData.PeopleID))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(peopleData);
+        //}
+
+        // GET: PeopleDatas/Delete/5
+        //public async Task<IActionResult> Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    var peopleData = await _context.PeopleData
+        //        .FirstOrDefaultAsync(m => m.PeopleID == id);
+        //    if (peopleData == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return View(peopleData);
+        //}
+
+        // POST: PeopleDatas/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> DeleteConfirmed(int id)
+        //{
+        //    var peopleData = await _context.PeopleData.FindAsync(id);
+        //    _context.PeopleData.Remove(peopleData);
+        //    await _context.SaveChangesAsync();
+        //    return RedirectToAction(nameof(Index));
+        //}
+
+        //private bool PeopleDataExists(int id)
+        //{
+        //    return _context.PeopleData.Any(e => e.PeopleID == id);
+        //}
+    }
+}

@@ -1,0 +1,83 @@
+﻿@model WebUI.Models.PeopleData
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PeopleData</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PeopleName" class="control-label"></label>
+                <input asp-for="PeopleName" class="form-control" />
+                <span asp-validation-for="PeopleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeopleFrom" class="control-label"></label>
+                <input asp-for="PeopleFrom" class="form-control" />
+                <span asp-validation-for="PeopleFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeopleGende" class="control-label"></label>
+                <input asp-for="PeopleGende" class="form-control" />
+                <span asp-validation-for="PeopleGende" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeopleDateOfBirth" class="control-label"></label>
+                <input asp-for="PeopleDateOfBirth" class="form-control" />
+                <span asp-validation-for="PeopleDateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeopleAddress" class="control-label"></label>
+                <input asp-for="PeopleAddress" class="form-control" />
+                <span asp-validation-for="PeopleAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeoplePIDNumber" class="control-label"></label>
+                <input asp-for="PeoplePIDNumber" class="form-control" />
+                <span asp-validation-for="PeoplePIDNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeoplePIDDate" class="control-label"></label>
+                <input asp-for="PeoplePIDDate" class="form-control" />
+                <span asp-validation-for="PeoplePIDDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeoplePIDPlace" class="control-label"></label>
+                <input asp-for="PeoplePIDPlace" class="form-control" />
+                <span asp-validation-for="PeoplePIDPlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeoplePIDValidUntil" class="control-label"></label>
+                <input asp-for="PeoplePIDValidUntil" class="form-control" />
+                <span asp-validation-for="PeoplePIDValidUntil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JoinDate" class="control-label"></label>
+                <input asp-for="JoinDate" class="form-control" />
+                <span asp-validation-for="JoinDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeopleImagePath" class="control-label"></label>
+                <input asp-for="PeopleImagePath" class="form-control" />
+                <span asp-validation-for="PeopleImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
