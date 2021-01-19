@@ -185,3 +185,6 @@ D:\Coding Learning\ManagementSystem\WebUI\obj\Debug\net5.0\Razor\Views\PeopleDat
 D:\Coding Learning\ManagementSystem\WebUI\obj\Debug\net5.0\Razor\Views\PeopleDatas\Edit.cshtml.g.cs
 D:\Coding Learning\ManagementSystem\WebUI\obj\Debug\net5.0\Razor\Views\PeopleDatas\Index.cshtml.g.cs
 D:\Coding Learning\ManagementSystem\WebUI\obj\Debug\net5.0\WebUI.csprojAssemblyReference.cache
+D:\Coding Learning\ManagementSystem\WebUI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Coding Learning\ManagementSystem\WebUI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Coding Learning\ManagementSystem\WebUI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

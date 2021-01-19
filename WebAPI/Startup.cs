@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;
+using Newtonsoft.Json;
 
 namespace WebAPI
 {
@@ -37,6 +38,10 @@ namespace WebAPI
 
             services.AddDbContext<WebAPIContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebAPIContext")));
+            //https://www.youtube.com/watch?v=YucN7Qu_LDs&list=PL4WEkbdagHIQVbiTwos0E38VghMJA06OT&index=4
+
+            services.AddMvc(options=>options.EnableEndpointRouting=false)
+                .AddNewtonsoftJson(opt=>opt.SerializerSettings.ReferenceLoopHandling= ReferenceLoopHandling.Ignore);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

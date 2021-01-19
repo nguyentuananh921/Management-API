@@ -158,3 +158,6 @@ D:\Coding Learning\ManagementSystem\WebAPI\obj\Debug\net5.0\ref\WebAPI.dll
 D:\Coding Learning\ManagementSystem\WebAPI\obj\Debug\net5.0\WebAPI.pdb
 D:\Coding Learning\ManagementSystem\WebAPI\obj\Debug\net5.0\WebAPI.genruntimeconfig.cache
 D:\Coding Learning\ManagementSystem\WebAPI\obj\Debug\net5.0\WebAPI.csprojAssemblyReference.cache
+D:\Coding Learning\ManagementSystem\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Coding Learning\ManagementSystem\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Coding Learning\ManagementSystem\WebAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

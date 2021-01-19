@@ -25,7 +25,9 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CarDriver>>> GetCarDrivers()
         {
-            return await _context.CarDrivers.ToListAsync();
+            //return await _context.CarDrivers.ToListAsync();
+            
+            return await _context.CarDrivers.Include(c => c.CarInfor).Include(c => c.PIDInfor).ToListAsync();
         }
 
         // GET: api/CarDrivers/5

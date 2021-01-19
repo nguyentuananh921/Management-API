@@ -1,0 +1,4 @@
+https://www.pluralsight.com/guides/asp.net-mvc-getting-default-data-binding-right-for-hierarchical-views
+
+
+https://github.com/ajsaulsberry/BlipBinding

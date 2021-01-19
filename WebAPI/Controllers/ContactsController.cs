@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using WebAPI.Data;
 using WebAPI.Models;
 
@@ -25,7 +26,10 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Contact>>> GetContact()
         {
-            return await _context.Contacts.ToListAsync();
+            //return await _context.Contacts.ToListAsync();
+            return  await _context.Contacts.Include(c => c.PIDInfor).ToListAsync();
+            
+
         }
 
         // GET: api/Contacts/5

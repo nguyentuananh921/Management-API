@@ -3,3 +3,6 @@ https://phantienquang.blogspot.com/2015/06/aspnet-mvc-ap-dung-mau-repository-tro
 https://stackoverrun.com/vi/q/2272476
 
 https://hoccungchuyengia.com/tim-hieu-ve-repository-pattern-va-generic-repository-pattern/
+
+
+https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff649690(v=pandp.10)

@@ -23,8 +23,12 @@
                 <span asp-validation-for="PeopleFrom" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PeopleGende" class="control-label"></label>
-                <input asp-for="PeopleGende" class="form-control" />
+                <label asp-for="PeopleGende" class="control-label">Chọn giới tính</label>
+                <select class="form-control" id="PeopleGende" name="PeopleGende">
+                    <option value="Chọn giới tính" hidden disabled selected>Giới tính</option>
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                </select>
                 <span asp-validation-for="PeopleGende" class="text-danger"></span>
             </div>
             <div class="form-group">
